@@ -1,0 +1,14 @@
+- patterns:
+    - .*\.hs
+  excludes:
+    - dist/
+    - dist-newstyle/
+  commands:
+    - ormolu -i \0
+
+- patterns:
+    - .*\.nix
+  excludes:
+    - nix/sources.nix
+  commands:
+    - nixpkgs-fmt \0
